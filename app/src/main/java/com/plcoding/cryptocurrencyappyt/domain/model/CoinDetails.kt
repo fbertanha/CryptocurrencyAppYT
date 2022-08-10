@@ -12,11 +12,10 @@ data class CoinDetails(
     val isActive: Boolean,
     val tags: List<String>,
     val team: List<TeamMember>
-) {
+)
 
-    data class TeamMember(
-        val name: String,
-        val position: String
-    )
-}
+data class TeamMember(
+    val name: String,
+    val position: String
+)
 

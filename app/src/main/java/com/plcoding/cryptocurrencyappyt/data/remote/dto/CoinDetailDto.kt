@@ -3,6 +3,7 @@ package com.plcoding.cryptocurrencyappyt.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 import com.plcoding.cryptocurrencyappyt.domain.model.CoinDetails
+import com.plcoding.cryptocurrencyappyt.domain.model.TeamMember
 
 data class CoinDetailDto(
     val description: String,
@@ -85,7 +86,7 @@ data class CoinDetailDto(
     )
 }
 
-fun CoinDetailDto.TeamMemberDto.toTeamMember() = CoinDetails.TeamMember(
+fun CoinDetailDto.TeamMemberDto.toTeamMember() = TeamMember(
     name = name,
     position = position
 )

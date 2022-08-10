@@ -43,7 +43,7 @@ class CoinRepositoryImpl @Inject constructor(
             val coinDetail = api.getCoinById(coinId).toCoinDetail()
             emit(Resource.Success(coinDetail))
         } catch (e: HttpException) {
-            emit(Resource.Error("An unexpected error occurred."))
+            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occurred."))
         } catch (e: IOException) {
             emit(
                 Resource.Error(
